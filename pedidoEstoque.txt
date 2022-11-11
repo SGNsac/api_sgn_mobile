@@ -1,0 +1,3 @@
+Aprovação de pedido
+    -   Tabela de pedido estoque
+    -   Tabela de pedido_item

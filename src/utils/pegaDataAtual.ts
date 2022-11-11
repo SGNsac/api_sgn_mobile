@@ -1,0 +1,17 @@
+const dataAtual = () => {
+  const date = new Date()
+
+  let data:any
+
+  date.getDate() > 10 ? data = date.getDate() : data = '0' + date.getDate()
+
+  let month:any = date.getMonth() + 1
+
+  month < 10 ? month = '0' + date.getMonth() : month = date.getMonth()
+
+  const dateFormated = date.getFullYear() + '-' + (month + 1) + '-' + data
+
+  return dateFormated
+}
+
+export default dataAtual
