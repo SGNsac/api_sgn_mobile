@@ -41,6 +41,7 @@ Router.post('/changePassword',
         const saltRounds = 2
         const passwordHash = await bcrypt.hash(password, saltRounds)
         const sqlQuery = update(user, passwordHash)
+        console.log(sqlQuery)
         execSqlQueryTrocarSenha(sqlQuery, res)
       } else {
         res.status(400).json({ message: 'Senha deve conter 10 ou mais caracteres', error: true, status: '400' })

@@ -9,6 +9,8 @@ import sql from 'mssql'
 
 import RouterUser from './routes/usuario.routes'
 
+import RouterPedido from './routes/pedidos.routes'
+
 dotenv.config()
 
 const app = express()
@@ -31,6 +33,8 @@ sql.connect(config)
   )
 
 app.use('/usuario', RouterUser)
+
+app.use('/pedido', RouterPedido)
 
 app.get('/', async (req, res) => {
   res.status(200).send({ message: 'Rota padrão', status: '200', ERROR: false })

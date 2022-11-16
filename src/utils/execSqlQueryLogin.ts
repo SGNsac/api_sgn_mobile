@@ -11,14 +11,14 @@ async function execSQLQueryLogin (sqlQuery, res, password) {
     .then(async result => {
       const senhaBanco = result.recordset[0].USUA_SENHA_APP
 
-      const comparePassword = await bcrypt.compare(password, senhaBanco)
+      const codigoUSer = result.recordset[0].USUA_COD
 
-      console.log(comparePassword)
+      const comparePassword = await bcrypt.compare(password, senhaBanco)
 
       if (!comparePassword) {
         res.status(404).send({ message: 'Senha errada ', error: true, status: 404 })
       } else {
-        res.status(200).send({ message: 'Login efetuado', error: false, status: 200 })
+        res.status(200).send({ message: 'Login efetuado', error: false, status: 200, userCod: codigoUSer })
       }
     })
     .catch(err => { res.json(err) })
