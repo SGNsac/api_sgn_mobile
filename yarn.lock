@@ -305,15 +305,6 @@
   resolved "https://registry.npmjs.org/@types/mime/-/mime-3.0.1.tgz"
   integrity sha512-Y4XFY5VJAuw0FgAqPNd6NNoV44jbq9Bz2L7Rh/J6jLTiHBSBJa9fxqQIvkIld4GsoDOcCbvzOUAbLPsSKKg+uA==
 
-"@types/mssql@^8.1.1":
-  version "8.1.1"
-  resolved "https://registry.npmjs.org/@types/mssql/-/mssql-8.1.1.tgz"
-  integrity sha512-5gNrxeTBbF9OYe+tj6FVPlBypH4B6MjmBKMtEoU7sOjbpnzi17AZ5M0ob5nQNFo+EFdopGMXlKkUdysUoZ/TRQ==
-  dependencies:
-    "@types/node" "*"
-    "@types/tedious" "*"
-    tarn "^3.0.1"
-
 "@types/node@*":
   version "18.7.18"
   resolved "https://registry.npmjs.org/@types/node/-/node-18.7.18.tgz"
@@ -335,13 +326,6 @@
   integrity sha512-z5xyF6uh8CbjAu9760KDKsH2FcDxZ2tFCsA4HIMWE6IkiYMXfVoa+4f9KX+FN0ZLsaMw1WNG2ETLA6N+/YA+cg==
   dependencies:
     "@types/mime" "*"
-    "@types/node" "*"
-
-"@types/tedious@*":
-  version "4.0.9"
-  resolved "https://registry.npmjs.org/@types/tedious/-/tedious-4.0.9.tgz"
-  integrity sha512-ipwFvfy9b2m0gjHsIX0D6NAAwGCKokzf5zJqUZHUGt+7uWVlBIy6n2eyMgiKQ8ChLFVxic/zwQUhjLYNzbHDRA==
-  dependencies:
     "@types/node" "*"
 
 "@typescript-eslint/eslint-plugin@^5.38.0":
@@ -2558,7 +2542,7 @@ tar@^6.1.11:
     mkdirp "^1.0.3"
     yallist "^4.0.0"
 
-tarn@^3.0.1, tarn@^3.0.2:
+tarn@^3.0.2:
   version "3.0.2"
   resolved "https://registry.npmjs.org/tarn/-/tarn-3.0.2.tgz"
   integrity sha512-51LAVKUSZSVfI05vjPESNc5vwqqZpbXCsU+/+wxlOrUjk2SnFTt97v9ZgQrD4YmxYW1Px6w2KjaDitCfkvgxMQ==
