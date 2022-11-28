@@ -20,7 +20,7 @@ import {
 } from '../query/pedidoQuery'
 import execSQLQueryPedidos from '../utils/execSQLQueryPedidos'
 import execSqlQueryPedidoDetalhe from '../utils/execSqlQueryPedidoDetalhe'
-import execSQLQuery from '../utils/execSqlQuery'
+import execAprovaPedido from '../utils/execAprovaPedido'
 const Router = express.Router()
 
 Router.get('/', (req, res) => {
@@ -79,7 +79,7 @@ Router.put('/:assPos/:pediCod',
       sql = updateASS4(pediCod)
     }
 
-    execSQLQuery(sql, res)
+    execAprovaPedido(sql, res)
   }
 )
 

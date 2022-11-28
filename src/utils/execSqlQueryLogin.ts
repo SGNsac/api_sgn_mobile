@@ -15,6 +15,8 @@ async function execSQLQueryLogin (sqlQuery, res, password) {
 
       const comparePassword = await bcrypt.compare(password, senhaBanco)
 
+      console.log(sqlQuery)
+
       if (!comparePassword) {
         res.status(404).send({ message: 'Senha errada ', error: true, status: 404 })
       } else {
